@@ -1,0 +1,59 @@
+<%- include('../partials/side-admin')%>
+
+<div class="col py-3">
+
+   
+    <table class="table" style="margin-top: 100px;">
+        <thead class="table-dark">
+          <tr>
+           <th class="col">Image</th>
+           <th class="col">Product Name</th>
+           <th class="col">Category</th>
+           <th class="col">Ordered quantity</th>
+           <th class="col">Price/kg</th>
+           <th class="col">Total</th>
+          </tr>
+        </thead>
+        <tbody >
+          <%productData.forEach(order => { %>
+            <tr>
+              <td ><img src="/admin-images/<%=order.productDetail._id%>.jpg"  alt="" style="width: 100px;"></td>
+         <td ><%= order.productDetail.name %> </td>
+         <td ><%= order.category_name.category_name %> </td>
+         <td ><%= order.productQuantity %> </td>
+         <td ><%= order.productDetail.price %> </td>
+
+         <% var a= order.productQuantity %>
+         <% var b= order.productDetail.price %>
+        <% var c=a*b %> 
+         <td >$<%= c %>(for <%= order.productQuantity %>kg ) </td>
+
+              </tr> 
+        <%  }) %> 
+
+       
+         
+         
+     
+        </tbody>
+      </table>
+      <div class="card m-5" style="width: 20rem;">
+        <div class="card-body">
+          <h5 class="card-title" style="text-decoration: underline;">Delivery Address</h5>
+          <% let phone='Ph:' %> 
+          <p class="card-text"><%= productData[0].name %>  </p><br>
+          <p class="card-text "><%= productData[0].address %>,<br><%= phone %><%= productData[0].phonenumber %>    </p><br>
+          
+        </div>
+      </div>
+</div>
+
+
+</div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+  crossorigin="anonymous"></script>
+
+</html>

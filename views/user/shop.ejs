@@ -1,0 +1,50 @@
+<%- include('../partials/user-header') %>
+<!-- breadcrumb-section -->
+
+
+<div class="container " style="height: 100%;margin-top: 100px; width: 100%;">
+    <h1>shop with us</h1>
+    <div class="row mr-2 mt-3">
+        <div class="col-6 col-md-3 mr-5" >
+    
+
+      <div style="width: 300px;height:300px;  background-color: rgb(246, 246, 246);">
+
+        <div style="width: 100%;height: 40px;padding:5px; background-color: rgb(103, 102, 102);">
+               <h5 class="text-center text-white ">Items</h3>
+
+               <ul class="pt-5">
+                        <% category.forEach(category => { %>
+                            <a href="/category-wise/<%= category._id %> " style="text-decoration: none;">
+                              <li class="text-black" > <h5><%= category.category_name %> </h6></li></a>
+                              
+                        <% }) %> 
+             
+               </ul>
+               
+        </div>
+      </div>
+      
+
+    </div>
+  
+<% product.forEach(product => { %>
+
+    <div class="card  m-3" style="width: 20rem;">
+        <img src="/admin-images/<%= product._id %>.jpg " class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+          <h5 class="card-title"><%= product.name %> </h5>
+          <p class="card-text"><strong>Category : </strong><%= product.category.category_name %> </p>
+          <p class="card-text text-danger"><b> ₹ <%= product.price %></b> </p>
+           <a href="/product-view/<%= product._id %>" class="btn btn-primary">Buy now</a>
+           <a class="btn btn-danger" href="/add-to-wishlist/<%= product._id %> "><i class='fa fa-heart'> <sub>+</sub></i></a>
+        </div>
+      </div>
+
+      <% }) %> 
+        
+   
+    </div>
+</div>
+
+<%- include('../partials/user-footer') %>

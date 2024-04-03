@@ -1,0 +1,64 @@
+<%- include('../layout/layout') %>
+<link rel="stylesheet" href="/public/stylesheets/u-footer.css">
+
+
+<section class="news pt-5">
+  <div class="container-fluid pt-3 text-white">
+    <div class="row">
+      <div class="col-lg-11 m-auto">
+        <div class="row">
+          <div class="col-lg-2">
+            <h3 class="pb-3">Category</h3>
+            <% category.forEach(category => { %>
+            <p class="m-0"><a href="#"><%= category.category_name %></a></p>
+            <% }) %> 
+          </div>
+
+          <div class="col-lg-2">
+            <h3 class="pb-3">Company</h3>
+            <p class="m-0"><a href="/">Home</a></p>
+            <p class="m-0"><a href="/shop">Shop</a></p>
+            <p class="m-0"><a href="/about">About</a></p>
+          </div>
+
+          <div class="col-lg-3">
+            <h3 class="pb-3">Address</h3>
+            <p>195, Alangudi Road,Pudukkottai <br>
+             +9345997910
+            </p>
+           <a href="https://mail.google.com/mail/u/0/#inbox"></a>
+          </div>
+<div class="col-lg-5">
+  <h3 class="pb-3">Newsletter</h3>
+
+     <form action="" class="d-flex">
+      <input type="text " class="sub p-3" placeholder="Your Email">
+      <button class="btns">Subscribe</button>
+     </form>
+     <div class="icon d-flex text-center pt-5">
+      <div class="circle p-2">
+        <a href="https://www.facebook.com/hari.selvan.334?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+      </div>
+
+      <div class="circle p-2 mx-3">
+        <a href="https://x.com/Hariselvan545?t=gVmgDU1WArgvm3j34llkbA&s=08"> <i class="fab fa-twitter"></i>
+      </div>
+
+      <div class="circle p-2">
+       <a href="https://www.instagram.com/attitude_s_07?igsh=MTIyNHA5b2k0b2k4aA=="><i class="fab fa-instagram" ></i></a> 
+      </div>
+
+     </div>
+
+</div>
+
+        </div>
+<hr>
+<p class="text-center pb-3 copy">Copyright Ⓒ2024 All rights reserved | This Website is made by HariSelvan</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

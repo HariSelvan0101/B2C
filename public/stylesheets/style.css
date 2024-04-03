@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+.nav-item a{
+    margin-right: 15px;
+    margin-left: 15px;
+    color: black;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+.nav-item a:hover{
+    color: rgb(231, 41, 120);
+}
+
+.icon{
+    color: rgb(231, 41, 120);
+    font-size: 1.1rem;
+   
+}
+#kid_img{
+  width:85%;
+  height: 70%;
+  margin-top: 20px;
+  position: absolute;
+  border-radius: 50% ;
+  object-fit: cover;
+  object-position: 80% 20%; /* try 20px 10px */ 
+  z-index: 2;
+}
+#con_des{
+  text-align: left;
+  margin-left: 2rem;
+}
+#about_img{
+  z-index: 1;
+  margin-top:-7rem;
+}
+#shop_btn{
+  background-color: #0d6efd;
+ 
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 2rem;
+  border-radius: 20px;
+  
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.first{
+ padding-bottom: 2rem;
+}
+.contact_container{
+  
+  margin:6rem;
+  justify-content: center;
+}
+#contact_row{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.map{
+  width: 95%;
+ margin: 32px;
+ z-index: 5;
+}
+.relevent_product{
+  display: block;
+ padding-left: 4rem;
+
+}
+

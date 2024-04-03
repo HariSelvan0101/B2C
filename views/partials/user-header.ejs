@@ -1,0 +1,73 @@
+
+    <%- include('../layout/layout') %>
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <title>Multi Shop</title>
+   <header >
+    <div >
+            <nav class="navbar navbar-expand-lg"   >
+              <img src="/images/img/multishop.jpeg " class="ml-4 logo" alt="..." style="width: 185px;" height="90px">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav m-auto my-2 ">
+                    <li class="nav-item   ">
+                      <a class="nav-link " href="/">Home </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link  " href="/shop">Shop</a>
+                    </li> 
+                    <li class="nav-item">
+                      <a class="nav-link " href="/about">About</a>
+                    </li>
+                    <% if (customer) { %> 
+                    <li class="nav-item">
+                      <a class="nav-link " href="/orderDetails">Orders</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link "href="/logout">LogOut</a>
+                    </li>
+                   
+                  <% }else{ %> 
+                    <li class="nav-item">
+                      <a class="nav-link " href="/login">Login</a>
+                    </li>
+                    <% } %> 
+                  </ul>  
+                  
+                    
+                 
+                 
+                  
+                    <form class="d-flex mr-4">
+                   
+                      <a href="/viewWishList"> <span><i class="far fa-heart icon"></i></span></a>
+                      <% if (customer) { %>
+                      <% if (locals.countWishlist) { %>
+                        <sup>  <span class="badge rounded-pill badge-notification bg-danger "><%=countWishlist %> </span></sup>
+                    <% } %>
+                    <% } %>
+                  
+                    <a href="/viewCart"> <span><i class="fab fa-opencart ml-2 icon"></i></span></a>
+                    <% if (customer) { %>
+                    <% if (locals.countInCart) { %>
+                      <sup> <span class="badge rounded-pill badge-notification bg-danger "><%=countInCart %> </span></sup>
+                      <% } %>
+                      <% } %>
+                     <a href="/viewProfile"> <span><i class="far fa-user ml-2 icon"></i></span>
+                  </a>
+                    </form>
+
+                   
+             
+                                 
+                    
+            
+                  </div>
+                </div>
+              </nav>
+            </div>
+    </header>
+   

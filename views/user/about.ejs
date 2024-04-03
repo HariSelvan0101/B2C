@@ -1,0 +1,71 @@
+<%- include('../partials/user-header') %>
+<div class="container" style="background-color: rgb(247, 247, 247); ">
+    <h1>About us</h1>
+    
+        <h4 id="story_title" style="color: red;">Our story</h4>
+        <div class="container">
+            <div class="row">
+              <div class="col order-first">
+                <h3 style="color: #0d6efd;">About our Store</h3>
+               <p id="con_des">Shopping is an activity in which a customer browses
+                 the available goods or services presented by one or more 
+                 retailers with the potential intent to purchase a suitable 
+                 selection of them. A typology of shopper types has been 
+                 developed by scholars which identifies one group of shoppers 
+                 as recreational shoppers, that is, those who enjoy shopping
+                  and view it as a leisure activity.<br>
+                  Online shopping is a form of electronic commerce which allows
+                   consumers to directly buy goods or services from a seller over 
+                   the Internet.<br><br>
+                   <a id="shop_btn" href="/shop"> Go to Shop</a>
+                </p>
+               
+              </div>
+              <div class="col">
+               <img src="/public/admin-images/about-image.png" alt="" id="about_img">
+              </div>
+              <div class="col">
+                <img src="/public/admin-images/kid-img-removebg-preview.png" alt="" id="kid_img">
+              </div>
+            </div>
+          </div>
+        
+
+</div>
+<div class="map">
+  <div style="width: 100%"><iframe width="100%" height="400" 
+    frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+    src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;
+    hl=en&amp;q=alangudi%20bus%20stant,pudukkottai+(Multi%20shop)&amp;
+    t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+    <a href="https://www.gps.ie/">gps devices</a></iframe></div>
+</div>
+<form action="" >
+    <div class="contact_container" style="background-color: rgb(173, 173, 173); padding-top: 2rem; margin-top: -2rem; z-index: 3;">
+        <div class="row" id="contact_row" >
+            <h4 style="padding-bottom: 1rem;">Get in Touch</h4>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="enter your name">
+            </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Subject</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="mb-3" style="text-align: center;">
+            <button type="submit" class="btn btn-primary mb-3">SUBMIT</button>
+          </div>
+        </div>
+    </div>
+  </form>
+ 
+
+<%- include('../partials/user-footer') %>

@@ -1,0 +1,259 @@
+<%- include('../partials/user-header') %>
+
+<div class="breadcrumb-section breadcrumb-bg" style="margin-top:60px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text mb-5">
+                   
+                    <h1>Check Out Product</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+
+<!-- check out section -->
+<div class="checkout-section mt-150 mb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 order-md-1">
+                <section>
+                    <div class="container">
+                        <form id="placeOrder">
+                            <label class="col-xs-3 control-label">Select Shipping Address</label>
+
+                            <select class="form-select mt-2" required name="address" style="width: 20rem">
+                                <% userData.addressDetails.forEach((address)=>{%>
+                                    <option name="address">
+                                        <%= address.housename %>,<%= address.postoffice%>,<%= address.landmark %>,<%=address.area %>,<%= address.district %>,<%= address.pin %>,<%=address.state %>
+                                    </option>
+                                    <% }) %>
+                            </select>
+                           
+
+                            <div class="d-block my-3">
+                                <div class="custom-control custom-radio">
+                                    <input id="credit" name="paymentMethod" type="radio" value="COD"
+                                        class="custom-control-input " checked required />
+                                    <label class="custom-control-label " for="credit">.     .   COD</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input id="debit" name="paymentMethod" type="radio" value="Online"
+                                        class="custom-control-input" required />
+                                    <label class="custom-control-label" for="debit">.  .   Online</label>
+                                </div>
+
+                              
+                                    <div class="card mt-3" style="width: 25rem;">
+                                    <div class="card-body">
+                                   
+                                    <div class="form-group"> <label>Have coupon?</label>
+                                    <div class="input-group" style="width: 20rem;"> <input type="text" class="form-control coupon" name="coupon" placeholder="Coupon code" >  </div>
+                                    </div>
+                                   
+                                    </div>
+                                    </div>
+                                   
+
+                                <button type="submit" value="submit" class="btn btn-secondary mt-5">
+                                    Place order
+                                </button>
+
+                            </div>
+                        </form>
+
+
+
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                            Add new address
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                            Add new Address
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close">X</button>
+                                    </div>
+                                    <form action="/addNewAddress" method="post">
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label for="recipient-name"
+                                                    class="col-form-label">Housename:</label>
+                                                <input required type="text" class="form-control" id="housename"
+                                                    name="housename" />
+                                                <p id="houseError" style="color: red"></p>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Area:</label>
+                                                <input required type="text" class="form-control" id="area"
+                                                    name="area" />
+                                                <p id="areaError" style="color: red"></p>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Landmark:</label>
+                                                <input required type="text" class="form-control" id="landmark"
+                                                    name="landmark" />
+                                                <p id="landmarkError" style="color: red"></p>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="firstName">District</label>
+                                                        <input required type="text" class="form-control"
+                                                            id="district" name="district" />
+                                                        <p id="stateError" style="color: red"></p>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName">State</label>
+                                                        <input required type="text" class="form-control" id="state"
+                                                            name="state" />
+                                                        <p id="pincodeError" style="color: red"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="firstName">Post office</label>
+                                                        <input required type="text" class="form-control"
+                                                            id="postoffice" name="postoffice" />
+                                                        <p id="stateError" style="color: red"></p>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName">Pincode</label>
+                                                        <input required type="text" class="form-control" id="pin"
+                                                            name="pin" />
+                                                        <p id="pincodeError" style="color: red"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <button type="submit" value="submit" class="btn btn-primary">
+                                                Add
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                  <div class="card-header py-3">
+                    <h5 class="mb-0">Your order Details</h5>
+                  </div>
+                  <% productData.forEach((product)=>{%>
+                  <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                        <%= product.productDetail.name %> (<%= product.productQuantity%>)
+
+                        <% var a=product.productDetail.price%>
+                        <% var b=product.productQuantity%>
+                            <% var c=a*b %>
+                        <span id="">₹<%= c %></span>
+                      </li>
+                      <% }) %>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                        <div>
+                          <strong>Total amount</strong>
+                         
+                        </div>
+                        <span id="netamount"><strong> ₹ <%= sum %> </strong></span>
+                      </li>
+                    </ul>
+        
+                  
+                  </div>
+                  
+                </div>
+              </div>
+
+        </div>
+    </div>
+</div>
+
+
+  
+
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script>
+        $("#placeOrder").submit((e) => {
+            e.preventDefault();
+            $.ajax({
+                url: '/placeOrder',
+                method: 'post',
+                data: $('#placeOrder').serialize(),
+                success: (response) => {
+
+                    if (response.invalid) {
+                        console.log('response available');
+							Swal.fire({
+								title: "Invalid Coupon!",
+								icon: "error",
+								confirmButtonText: "continue",
+							}).then(function () {
+								location.reload()
+                               
+							});
+                        } 
+                       else if(response.couponDeleted){
+							Swal.fire({
+								title: "Coupon no longer exist!",
+								icon: "error",
+								confirmButtonText: "continue",
+							}).then(function () {
+								location.reload()
+							});
+						}
+                        else if(response.coupon){
+                            Swal.fire({
+                                title:"Coupon already used!",
+                                icon :"error",
+                                confirmButtonText: "continue",
+                            }).then(function () {
+                                location.reload()
+                            });
+                        }
+                    else if (response.success) {
+                     
+                        location.href = "/orderSuccess";
+
+                    }else if(response.url){
+                        window.location =response.url
+                     
+
+                    }
+                    
+
+
+                }
+
+
+            })
+        })
+    </script>
+
+    </body>
+
+    </html>

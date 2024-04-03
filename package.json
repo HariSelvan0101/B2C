@@ -1,0 +1,35 @@
+{
+  "name": "ecomerce-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "audit": "^0.0.6",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.3",
+    "express-fileupload": "^1.4.0",
+    "express-partial": "^0.1.0",
+    "express-session": "^1.17.3",
+    "fix": "^0.0.6",
+    "moment": "^2.29.4",
+    "mongodb": "4.1",
+    "mongoose": "^6.7.3",
+    "mongoose-unique-validator": "^3.1.0",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^3.1.0",
+    "stripe": "^11.5.0",
+    "sweetalert2": "^11.6.13"
+  }
+}

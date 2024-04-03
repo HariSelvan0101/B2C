@@ -1,0 +1,92 @@
+
+
+<%- include('../partials/user-header') %>
+<link rel="stylesheet" href="/public/stylesheets/ordered-prod.css">
+
+<section class="bg-light pt-5" style="height: 75vh;">
+<div class="container-fluid ">
+ 
+  <div class="container ">
+    <!-- Title -->
+    <div class="d-flex justify-content-between align-items-center py-3">
+      <h2 class="h5 mb-0"><a href="#" class="text-muted"></a> Order #16123222</h2>
+    </div>
+  
+    <!-- Main content -->
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- Details -->
+       
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="mb-3 d-flex justify-content-between">
+              <div>
+                <span class="me-3">22-11-2021</span>
+                <span class="me-3">#16123222</span>
+                <span class="me-3">Visa -1234</span>
+                <span class="badge rounded-pill bg-info">SHIPPING</span>
+              </div>
+             
+            </div>
+           
+            <table class="table table-borderless">
+              <tbody>
+                <% productData.forEach((order)=>{ %>
+                <tr>
+                  <td>
+                    <div class="d-flex mb-2">
+                      <div class="flex-shrink-0">
+                        <img src="/public/admin-images/<%=order.productDetail._id %>.jpg" alt="" width="35" class="img-fluid">
+                      </div>
+                      <div class="flex-lg-grow-1 ms-3">
+                        <h6 class="small mb-0"><a href="#" class="text-reset"> <%= order.productDetail.name %></a></h6>
+                        <span class="small">Category:  <%= order.category_name.category_name%> </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>  <%= order.productQuantity %> quantity</td>
+
+                  <% var a=order.productQuantity%>
+                  <% var b=order.productDetail.price%>
+                    <% var c=a*b %>
+                      
+                  <td class="text-end"> <%=c %> ₹ ( for <%= order.productQuantity%> quantity )</td>
+                </tr>
+                <% }) %>
+              </tbody>
+            
+            </table>
+           
+          </div>
+        </div>
+        
+        <!-- Payment -->
+       
+      </div>
+      <div class="col-lg-4">
+        <!-- Customer Notes -->
+     
+        <div class="card mb-4">
+          <!-- Shipping information -->
+          <div class="card-body">
+            <h3 class="h6">Shipping Information</h3>
+            
+            <hr>
+            <h3 class="h6">Address</h3>
+            <address>
+              <strong><p><%=productData[0].name %></strong><br>
+                <%=productData[0].address %><br>
+              
+              <abbr >Ph:</abbr> (+91)<%=productData[0].phonenumber %>
+            </address>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+<%- include('../partials/user-footer')%> 
+

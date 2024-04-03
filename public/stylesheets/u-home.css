@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.btnc{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height: 53px;
+    width: 40%;
+    color: black;
+    border: none;
+    outline: none;
+    background: white;
+    cursor: all 0.4s;
+}
+.btnc:hover{
+    background: rgb(238, 11, 105);
+    color: white;
+    transition: all 0.4s;
+}
+
+
+.zoom-n-rotate{
+    border-radius: 0;
+    outline: none;
+    overflow: hidden;
+}
+
+.zoom-n-rotate img{
+    transition: transform .5s ease-in-out;
+}
+.zoom-n-rotate:hover img{
+    transform: scale(1.5);
+}
+/* ----------- */
+
+.product h1{
+    font-weight: 800;
+    font-size: 2.6rem;
+}
+
+.product{
+   
+    background: rgb(246, 243, 243);
+}
+
+div.card-pr:hover{
+  
+box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.03);
+
+}
+
+.discount{
+    height: 50px;
+    width: 50px;
+    background: rgb(238, 11, 105);
+    border-radius: 50%;
+    padding: 12px 5px;
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
+/* ------- */
+
+.iconic p{
+    text-align: justify;
+    font-family: 'prompt' , 'sans-serif';
+}
+
+.icone{
+ color:  rgb(238, 11, 105);
+   font-size: 2.5rem;
+
+}
+
+.caketext{
+    color:  rgb(227, 102, 154);
+
+}
+
+/* =Jumbotron Main
+-------------------------------------------------------------- */
+.jumbotron.jumbotron-main { 
+    height: 100%;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	margin:0;
+}
+
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	background: #6819e8; /* Old browsers */
+	background: -moz-linear-gradient(left,  #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #6819e8 0%,#7437d0 35%,#615fde 68%,#6980f2 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #6819e8 0%,#7437d0 35%,#615fde 68%,#6980f2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6819e8', endColorstr='#6980f2',GradientType=1 ); /* IE6-9 */
+}
+
+.jumbotron.jumbotron-main hr {
+	border-width: 1px 0px;
+    border-style: dotted none;
+    border-color: rgba(255, 255, 255, 0.35);
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    width: 49px;
+    height: 4px;
+    text-align: center;
+    position: relative;
+    clear: both;
+}
+
+.jumbotron.jumbotron-main a {
+    color: #fff;
+}
+
+.center-vertically {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.center-vertically-holder { 
+	display: table;
+	height: 100%;
+}
+
+.scroll-indicator {
+	padding-top:6px;
+    display: inline-block;
+    width: 50px;
+}
+
+.arrow-scroll-indicator {
+	font-size: 10px;
+	color: rgba(255, 255, 255, 0.60);
+}
+
+.parallax-window {
+    background: transparent;
+}
+
+.brand_container{
+    background-color: rgb(233, 236, 236);
+    padding-bottom: 17px;
+}
+.fa-solid{
+    font-size: 35px;
+    position: absolute;
+    padding: 7px;
+    
+}
+.fa-brands{
+    font-size: 35px;
+    position: absolute;
+    padding: 7px;
+}
+.fa-regular{
+    font-size: 35px;
+    padding: 7px;
+    position: absolute;
+    margin-left: 150px;
+
+}
